@@ -27,7 +27,7 @@ Stored as an environment variable in the container. The Docker host root user ca
 * THERMOSTAT_SERIAL=''
   * Serial of the Nest thermostat
   * Can remain blank if only one device on account
-* Temerature range humidity levels
+* Temerature range humidity levels (IMPORTANT: Use Farenheit values. Celsius conversion will happen in the container if needed.)
   * HUM_40_PLUS=40
     * Temperatures above 40F
   * HUM_30_40=40
