@@ -27,7 +27,7 @@ Stored as an environment variable in the container. The Docker host root user ca
 * THERMOSTAT_SERIAL=''
   * Serial of the Nest thermostat
   * Can remain blank if only one device on account
-* Temerature range humidity levels (IMPORTANT: Use Farenheit values. Celsius conversion will happen in the container if needed.)
+* Temerature range humidity levels (the defaults are recommended -- see credits)
   * HUM_40_PLUS=40
     * Temperatures above 40F
   * HUM_30_40=40
@@ -39,7 +39,8 @@ Stored as an environment variable in the container. The Docker host root user ca
   * HUM_30_20=10
   * HUM_MINUS_30=5
     * Temperatures below -30F
-  
+## Farenheit AND Celsius Support
+The variable names above include Farenheit temperature ranges. Use the F scale when choosing your humidity level. If your Nest is configured for Celsius, appropriate conversion will happen in the container.
 ## Credit
 - Uses nest.class.php from https://github.com/rbrenton/nest-api (a fork of gboudreau/nest-api)
 - Levels based on: http://www.startribune.com/fixit-what-is-the-ideal-winter-indoor-humidity-level/11468916/
