@@ -41,40 +41,40 @@ try {
 	// Check the outside temperature and set the humidity accordingly
 
 	// 41° or warmer...
-	if($outsideTemp>tempFtoScale(41,$scale)) {
-		$targetHumidityAdjusted = 40;
+	if($outsideTemp>tempFtoScale(40,$scale)) {
+		$targetHumidityAdjusted = getenv('HUM_40_PLUS');
 	}
 	// 30°to 40°
 	else if($outsideTemp>=tempFtoScale(30,$scale)) {
-		$targetHumidityAdjusted = 40;
+		$targetHumidityAdjusted = getenv('HUM_30_40');
 	}
 	// 20°to 30°
 	else if($outsideTemp>=tempFtoScale(20,$scale)) {
-		$targetHumidityAdjusted = 35;
+		$targetHumidityAdjusted = getenv('HUM_20_30');
 	}
 	// 10°to 20°
 	else if($outsideTemp>=tempFtoScale(10,$scale)) {
-		$targetHumidityAdjusted = 30;
+		$targetHumidityAdjusted = getenv('HUM_10_20');
 	}
 	// 0°to 10°
 	else if($outsideTemp>=tempFtoScale(0,$scale)) {
-		$targetHumidityAdjusted = 25;
+		$targetHumidityAdjusted = getenv('HUM_0_10');
 	}
 	// 10-below to 0
 	else if($outsideTemp>=tempFtoScale(-10,$scale)) {
-		$targetHumidityAdjusted = 20;
+		$targetHumidityAdjusted = getenv('HUM_10_0');
 	}
 	// 20-below to 10-below
 	else if($outsideTemp>=tempFtoScale(-20,$scale)) {
-		$targetHumidityAdjusted = 15;
+		$targetHumidityAdjusted = getenv('HUM_20_10');
 	}
 	// 30-below to 20-below
 	else if($outsideTemp>=tempFtoScale(-30,$scale)) {
-		$targetHumidityAdjusted = 10;
+		$targetHumidityAdjusted = getenv('HUM_30_20');
 	}
 	// Any colder...
 	else {
-		$targetHumidityAdjusted = 5;
+		$targetHumidityAdjusted = getenv('HUM_MINUS_30');
 	}
 
 	echo date("Y/m/d H:i:s")." INFO: IN: ".round($insideTemp,0)."{$scale}, ";

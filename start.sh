@@ -21,6 +21,7 @@ fi
 
 #Run cron
 echo "INFO: Starting cron."
+printenv | grep "HUM_" > /etc/environment
 cron
 
 #tail it to the console
