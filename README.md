@@ -4,26 +4,26 @@
 Automatic humidity adjustment docker container for Nest 2nd gen+
 
 ## Description
-Every hour, this container fetches the current outdoor temperature and current humidity setting from your Nest thermostat. If needed, it sends a new humidity setting (minimum indoor himidity) to the thermostat.
+Every hour, this container fetches the current outdoor temperature and current humidity setting from your Nest thermostat. If needed, it sends a new humidity setting (minimum indoor humidity %) to the thermostat.
 
-This automates the need to adjust indoor humidity levels to safe levels depending on the outdoor temperature. When the temperature outside drops, condensation and ice can build on your home's walls and windows causing damge ranging from mold growth to cracked window frames. Low humidity levels reduce condensation build up in cold temperatures.
+This automates the need to adjust indoor humidity levels to safe levels depending on the outdoor temperature. When the temperature outside drops, condensation and ice can build on your home's walls and windows causing damage ranging from mold growth to cracked window frames. Low humidity levels reduce condensation build-up in cold temperatures.
+
+Likewise, low humidity levels can exacerbate health problems through the cracking of skin and irritation of the respiratory system. Maintaining a balance of indoor humidity is essential to a healthy body and healthy home.
 
 ## Pre-requisites
 * A Nest thermostat (2nd gen or greater)
-* A (whole home) humidifier controlled by the Nest
+* A (whole home) humidifier *controlled* by the Nest
 * A docker host with connectivity to the Internet
-* Nest account credentials
+* Your https://home.nest.com account credentials
 
 ## Docker Environment Variables
-Stored as an environment variable in the container. The Docker host root user can inspect the container and see these values.
+Stored as an environment variable in the container. **Note:** The Docker host root user can inspect the container and see these values. However, if your root account has been compromised, you might have bigger problems.
 
 ### Required
 * NESTUSER=''
   * Username of the Nest account
-  * Required
 * NESTPW=''
   * Password of the Nest account
-  * Required
 
 ### Optional
 * THERMOSTAT_SERIAL=''
