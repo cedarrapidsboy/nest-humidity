@@ -1,5 +1,7 @@
 # nest-humidity
 
+**NOTICE: THIS SCRIPT IS OBSOLETE DUE TO CHANGES IN NEST 2FA AND THE GOOGLIZING OF IT. FWIW, ECOBEE HAS THIS FUNCTIONALITY OOTB.
+
 ## Summary
 Automatic humidity adjustment docker container for Nest 2nd gen+
 
